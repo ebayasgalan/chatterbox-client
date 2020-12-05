@@ -10,14 +10,6 @@ Messages.getAllMessages = function() {
   }, null, '/classes/messages');
 };
 
-<<<<<<< HEAD
-var createMessage = function() {
-=======
-Messages.createMessage = function() {
->>>>>>> 414dd5f9ffab7935b83da7bd941693c097da0f1c
-
-};
-
 Messages.deleteMessage = function() {
 
 };
