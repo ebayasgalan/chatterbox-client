@@ -8,16 +8,21 @@ var MessagesView = {
     MessagesView.render();
   },
 
-  render: function() {
-    var messageHTML = '';
+  render: function(messages = Messages.allMessages) {
     // iterate through the messages
-    if (Messages.allMessages) {
-      for (let i = 0; i < Messages.allMessages.length; i++) {
-        let message = Messages.allMessages[i];
+    if (messages) {
+      for (let i = 0; i < messages.length; i++) {
+        let message = messages[i];
+        message.username = message.username || 'nobody';
         message.text = message.text || ' '; // Protects against messages with no text property.
-        messageHTML += MessageView.renderMessage(message);
+        MessagesView.renderMessage(message);
       }
-      MessagesView.$chats.append(messageHTML);
     }
+  },
+
+  renderMessage: function(message) {
+    // render message to DOM in chats section
+    var messageHTML = MessageView.render(message);
+    MessagesView.$chats.append(messageHTML);
   }
 };

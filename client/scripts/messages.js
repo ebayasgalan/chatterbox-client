@@ -10,6 +10,20 @@ Messages.getAllMessages = function() {
   }, null, '/classes/messages');
 };
 
+Messages.createMessage = function(message) {
+  Parse.create(message, function() {
+    console.log('success, message sent!');
+  });
+};
+
 Messages.deleteMessage = function() {
 
+};
+
+// Messages.createMessage(message);
+
+var message = {
+  username: 'shawndrost',
+  text: '11:20',
+  roomname: '4chan'
 };

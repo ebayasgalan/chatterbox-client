@@ -7,16 +7,4 @@ var MessageView = {
       </div>
     `),
 
-  renderMessage: function(message) {
-    // render message to DOM in chats section
-    return MessageView.render(message);
-  }
 };
-
-/*
-var message = {
-  username: 'shawndrost',
-  text: 'trololo',
-  roomname: '4chan'
-};
-*/
