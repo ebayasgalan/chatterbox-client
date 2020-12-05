@@ -17,6 +17,3 @@ var createRoom = function(roomname) {
     console.log(payload);
   }, null, '/classes/rooms');
 };
-
-getAllRooms();
-console.log('allRooms: ', Rooms);
